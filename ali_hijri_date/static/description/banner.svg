@@ -1,41 +1,41 @@
-<svg width="900" height="400" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F766E"/>
-      <stop offset="100%" stop-color="#065F46"/>
-    </linearGradient>
-    <linearGradient id="paper" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#eef2f1"/>
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="400" fill="url(#bgGradient)"/>
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
 
   <!-- Decorative circles -->
-  <circle cx="110" cy="70" r="50" fill="#ffffff" opacity="0.06"/>
-  <circle cx="820" cy="330" r="70" fill="#ffffff" opacity="0.06"/>
-  <circle cx="760" cy="90" r="28" fill="#FBBF24" opacity="0.18"/>
-  <circle cx="150" cy="340" r="34" fill="#ffffff" opacity="0.05"/>
+  <circle cx="100" cy="80" r="40" fill="#875A7B" opacity="0.08"/>
+  <circle cx="700" cy="320" r="60" fill="#875A7B" opacity="0.08"/>
+  <circle cx="660" cy="95" r="25" fill="#875A7B" opacity="0.06"/>
+  <circle cx="150" cy="350" r="35" fill="#875A7B" opacity="0.06"/>
 
-  <!-- Calendar + crescent emblem -->
-  <g transform="translate(170,200)">
-    <rect x="-65" y="-62" width="130" height="124" rx="16" fill="url(#paper)"/>
-    <path d="M-65 -46 a16 16 0 0 1 16 -16 h98 a16 16 0 0 1 16 16 v14 h-130 z" fill="#0D9488"/>
-    <rect x="-34" y="-78" width="9" height="28" rx="4" fill="#FBBF24"/>
-    <rect x="25" y="-78" width="9" height="28" rx="4" fill="#FBBF24"/>
-    <g transform="translate(0,14)">
-      <circle cx="0" cy="0" r="34" fill="#0D9488"/>
-      <circle cx="13" cy="-5" r="29" fill="url(#paper)"/>
+  <!-- Hijri calendar + crescent emblem -->
+  <g transform="translate(400, 120)">
+    <!-- calendar body -->
+    <rect x="-48" y="-42" width="96" height="90" rx="11" fill="none" stroke="#875A7B" stroke-width="5"/>
+    <!-- header band -->
+    <line x1="-48" y1="-22" x2="48" y2="-22" stroke="#875A7B" stroke-width="5"/>
+    <!-- binding rings -->
+    <line x1="-22" y1="-54" x2="-22" y2="-38" stroke="#875A7B" stroke-width="5" stroke-linecap="round"/>
+    <line x1="22" y1="-54" x2="22" y2="-38" stroke="#875A7B" stroke-width="5" stroke-linecap="round"/>
+    <!-- crescent -->
+    <g transform="translate(0,15)">
+      <circle cx="0" cy="0" r="20" fill="#875A7B"/>
+      <circle cx="8" cy="-3" r="16" fill="#f3f1f4"/>
     </g>
-    <path d="M40 -22 l3.6 7.7 8.4 0.9 -6.2 5.7 1.7 8.3 -7.5 -4.2 -7.5 4.2 1.7 -8.3 -6.2 -5.7 8.4 -0.9 z" fill="#FBBF24"/>
+    <!-- star -->
+    <path d="M30 0 l2.6 5.6 6.1 0.7 -4.5 4.1 1.2 6 -5.4 -3 -5.4 3 1.2 -6 -4.5 -4.1 6.1 -0.7 z" fill="#875A7B"/>
   </g>
 
   <!-- Title -->
-  <text x="320" y="180" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#ffffff">Hijri Date Widget</text>
-  <!-- Arabic title -->
-  <text x="320" y="232" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#FBBF24">عرض التاريخ الهجري</text>
+  <text x="400" y="240" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#875A7B" text-anchor="middle">Hijri Date Widget</text>
+
   <!-- Subtitle -->
-  <text x="320" y="280" font-family="Arial, sans-serif" font-size="22" fill="#d1faf3">Umm al-Qura &amp; Gregorian dates, side by side</text>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="24" fill="#6c757d" text-anchor="middle">Umm al-Qura &amp; Gregorian dates, side by side</text>
 </svg>
