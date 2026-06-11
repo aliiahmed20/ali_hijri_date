@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hijri_converter_wizard_form" model="ir.ui.view">
+        <field name="name">hijri.converter.wizard.form</field>
+        <field name="model">hijri.converter.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Hijri / Gregorian Converter">
+                <sheet>
+                    <div class="alert alert-info" role="alert">
+                        Enter a date in either calendar; the equivalent in both is shown below.
+                    </div>
+                    <group>
+                        <group string="Gregorian">
+                            <field name="gregorian_date"/>
+                        </group>
+                        <group string="Hijri (Umm al-Qura)">
+                            <field name="hijri_day"/>
+                            <field name="hijri_month"/>
+                            <field name="hijri_year"/>
+                        </group>
+                    </group>
+                    <group string="Result">
+                        <field name="result_gregorian"/>
+                        <field name="result_hijri"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Close" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hijri_converter_wizard" model="ir.actions.act_window">
+        <field name="name">Date Converter</field>
+        <field name="res_model">hijri.converter.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Top-level (root) menu, restricted to a group that nobody has yet. -->
+    <menuitem id="menu_hijri_converter_root"
+              name="Hijri Converter"
+              action="action_hijri_converter_wizard"
+              groups="ali_hijri_date.group_hijri_converter"
+              sequence="95"/>
+
+</odoo>

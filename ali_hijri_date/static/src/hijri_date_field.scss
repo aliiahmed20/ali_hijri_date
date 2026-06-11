@@ -1,0 +1,50 @@
+.o_hijri_date {
+    // Keep the field tight within form/list cells.
+    max-width: 100%;
+
+    .o_hijri_caption {
+        line-height: 1.1;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .o_hijri_toggle,
+    .o_hijri_open_picker {
+        color: var(--text-muted, #6c757d);
+
+        &:hover {
+            color: var(--primary, #714b67);
+        }
+
+        > i {
+            font-size: 0.85rem;
+        }
+    }
+}
+
+// Calendar toggle inside the datepicker popover.
+.o_hijri_picker_popover {
+    .o_hijri_calendar_toggle {
+        color: var(--text-muted, #6c757d);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--primary, #714b67);
+        }
+    }
+
+    // Keep the month-navigation arrows intuitive (left = previous, right = next)
+    // even in Arabic / RTL. RTL otherwise mirrors the header layout AND rotates
+    // the chevron glyphs (.o_rtl .oi-chevron-*), which reads as the arrows being
+    // reversed. We pin the header to LTR (kept by rtlcss via the ignore comment)
+    // and cancel the glyph rotation. Applies to both calendars in this popover.
+    .o_datetime_picker_header {
+        /*rtl:ignore*/
+        direction: ltr;
+
+        .oi-chevron-left,
+        .oi-chevron-right {
+            transform: none;
+        }
+    }
+}

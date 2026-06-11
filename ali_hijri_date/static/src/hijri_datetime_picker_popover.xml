@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- Shared footer buttons (Clear / Apply), identical to web.DateTimePickerPopover. -->
+    <t t-name="ali_hijri_date.PickerButtons">
+        <div class="o_datetime_buttons d-flex gap-2">
+            <button
+                class="btn btn-sm btn-secondary"
+                title="Clear"
+                tabindex="-1"
+                t-on-click="props.pickerProps.onReset"
+            >
+                <i class="fa fa-eraser" />
+            </button>
+            <button
+                class="btn btn-sm btn-primary"
+                tabindex="-1"
+                t-on-click="props.close"
+            >
+                <span>Apply</span>
+            </button>
+        </div>
+    </t>
+
+    <t t-name="ali_hijri_date.HijriDateTimePickerPopover">
+        <div class="o_hijri_picker_popover">
+            <div class="o_hijri_calendar_switch d-flex justify-content-end px-2 pt-2">
+                <button
+                    class="btn btn-sm btn-link p-0 d-flex align-items-center gap-1 o_hijri_calendar_toggle"
+                    tabindex="-1"
+                    t-on-click="toggleCalendar"
+                    t-att-title="toggleTitle"
+                >
+                    <i class="fa fa-exchange" />
+                    <small t-esc="toggleLabel"/>
+                </button>
+            </div>
+            <HijriDateTimePicker t-if="ui.showHijri" t-props="props.pickerProps">
+                <t t-set-slot="buttons">
+                    <t t-call="ali_hijri_date.PickerButtons"/>
+                </t>
+            </HijriDateTimePicker>
+            <DateTimePicker t-else="" t-props="props.pickerProps">
+                <t t-set-slot="buttons">
+                    <t t-call="ali_hijri_date.PickerButtons"/>
+                </t>
+            </DateTimePicker>
+        </div>
+    </t>
+</templates>

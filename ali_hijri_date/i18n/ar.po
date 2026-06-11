@@ -1,0 +1,129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ali_hijri_date
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Muharram"
+msgstr "محرم"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Safar"
+msgstr "صفر"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Rabiʿ al-Awwal"
+msgstr "ربيع الأول"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Rabiʿ al-Thani"
+msgstr "ربيع الآخر"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Jumada al-Awwal"
+msgstr "جمادى الأولى"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Jumada al-Thani"
+msgstr "جمادى الآخرة"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Rajab"
+msgstr "رجب"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Shaʿban"
+msgstr "شعبان"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Ramadan"
+msgstr "رمضان"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Shawwal"
+msgstr "شوال"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Dhu al-Qaʿdah"
+msgstr "ذو القعدة"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri.js:0
+msgid "Dhu al-Hijjah"
+msgstr "ذو الحجة"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri_date_field.js:0
+msgid "Switch to Gregorian"
+msgstr "التبديل إلى الميلادي"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri_date_field.js:0
+msgid "Switch to Hijri"
+msgstr "التبديل إلى الهجري"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri_date_field.js:0
+msgid "Hijri Date"
+msgstr "التاريخ الهجري"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri_datetime_picker_popover.js:0
+msgid "Gregorian"
+msgstr "ميلادي"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri_datetime_picker_popover.js:0
+msgid "Hijri"
+msgstr "هجري"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri_datetime_picker_popover.js:0
+msgid "Switch to Gregorian calendar"
+msgstr "التبديل إلى التقويم الميلادي"
+
+#. module: ali_hijri_date
+#. odoo-javascript
+#: code:addons/ali_hijri_date/static/src/hijri_datetime_picker_popover.js:0
+msgid "Switch to Hijri calendar"
+msgstr "التبديل إلى التقويم الهجري"

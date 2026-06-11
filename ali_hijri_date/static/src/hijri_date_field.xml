@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="ali_hijri_date.HijriDateField">
+        <div class="o_hijri_date d-inline-flex flex-column" t-ref="root">
+            <div class="o_hijri_date_main d-flex gap-1 align-items-center">
+                <!-- Readonly -->
+                <t t-if="props.readonly">
+                    <span t-if="!isEmpty(startDateField)" class="text-truncate"
+                          t-esc="getFormattedValue(0)"
+                          t-att-data-tooltip="getFormattedValue(0, true)"/>
+                </t>
+
+                <!-- Edit, Hijri active: dedicated input parsing Hijri -> Gregorian -->
+                <t t-elif="ui.showHijri">
+                    <input
+                        t-ref="hijri-date"
+                        type="text"
+                        t-att-id="props.id"
+                        class="o_input cursor-pointer"
+                        autocomplete="off"
+                        placeholder="dd/mm/yyyy"
+                        t-att-value="getFormattedValue(0)"
+                        t-on-change="onHijriInput"
+                        t-on-input="onInput"
+                    />
+                    <button class="btn btn-link p-0 o_hijri_open_picker" tabindex="-1"
+                            title="Open calendar" t-on-click="() => openPicker(0)">
+                        <i class="fa fa-calendar" aria-label="Calendar"/>
+                    </button>
+                </t>
+
+                <!-- Edit, Gregorian active: standard service-managed input/button -->
+                <t t-else="">
+                    <t t-if="picker.activeInput !== startDateField and values[0]">
+                        <button
+                            t-ref="start-date"
+                            t-att-data-tooltip="getFormattedValue(0, true)"
+                            t-att-id="props.id"
+                            t-on-focus="() => picker.activeInput = startDateField"
+                            t-att-data-field="startDateField"
+                            t-att-class="'o_input o_daterange_start w-100 text-start ' + (props.warnFuture and isDateInTheFuture(0) ? 'text-danger' : '')">
+                            <t t-esc="getFormattedValue(0)"/>
+                        </button>
+                    </t>
+                    <t t-else="">
+                        <input
+                            t-ref="start-date"
+                            type="text"
+                            t-att-id="props.id"
+                            t-att-class="'o_input cursor-pointer ' + (props.warnFuture and isDateInTheFuture(0) ? 'text-danger' : '')"
+                            autocomplete="off"
+                            t-att-placeholder="props.placeholder"
+                            t-att-data-field="startDateField"
+                            t-on-input="onInput"
+                            t-on-focus="() => picker.activeInput = startDateField"
+                            t-att-title="props.warnFuture and isDateInTheFuture(0) ? futureWarningMsg : ''"
+                        />
+                    </t>
+                </t>
+
+                <!-- Calendar toggle -->
+                <button class="btn btn-link p-0 o_hijri_toggle" tabindex="-1"
+                        t-att-title="toggleLabel" t-on-click.stop="toggleCalendar">
+                    <i class="fa fa-exchange" aria-label="Toggle calendar"/>
+                </button>
+            </div>
+
+            <!-- Secondary caption: the other calendar -->
+            <small t-if="!isEmpty(startDateField)" class="o_hijri_caption text-muted"
+                   t-esc="getCaptionValue(0)"/>
+        </div>
+    </t>
+</templates>

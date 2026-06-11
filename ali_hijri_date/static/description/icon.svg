@@ -1,0 +1,31 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#065F46"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eef2f1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect x="0" y="0" width="140" height="140" rx="30" fill="url(#bg)"/>
+
+  <!-- Calendar body -->
+  <rect x="30" y="34" width="80" height="76" rx="10" fill="url(#paper)"/>
+  <!-- Calendar header band -->
+  <path d="M30 44 a10 10 0 0 1 10 -10 h60 a10 10 0 0 1 10 10 v8 h-80 z" fill="#0D9488"/>
+  <!-- Binding rings -->
+  <rect x="48" y="26" width="6" height="18" rx="3" fill="#FBBF24"/>
+  <rect x="86" y="26" width="6" height="18" rx="3" fill="#FBBF24"/>
+
+  <!-- Crescent moon (Hijri symbol) -->
+  <g transform="translate(70,80)">
+    <circle cx="0" cy="0" r="22" fill="#065F46"/>
+    <circle cx="8" cy="-3" r="19" fill="url(#paper)"/>
+  </g>
+  <!-- Star -->
+  <path d="M96 64 l2.3 5 5.4 0.6 -4 3.7 1.1 5.3 -4.8 -2.7 -4.8 2.7 1.1 -5.3 -4 -3.7 5.4 -0.6 z" fill="#FBBF24"/>
+</svg>
